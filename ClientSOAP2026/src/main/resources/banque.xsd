@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by XML-WS Runtime (https://github.com/eclipse-ee4j/metro-jax-ws). Runtime's version is XML-WS Runtime 4.0.3 git-revision#a57c222. --><xs:schema xmlns:tns="http://service.example.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://service.example.com/">
+
+<xs:element name="compte" type="tns:compte"/>
+
+<xs:element name="convert" type="tns:convert"/>
+
+<xs:element name="convertResponse" type="tns:convertResponse"/>
+
+<xs:element name="getCompte" type="tns:getCompte"/>
+
+<xs:element name="getCompteResponse" type="tns:getCompteResponse"/>
+
+<xs:element name="listComptes" type="tns:listComptes"/>
+
+<xs:element name="listComptesResponse" type="tns:listComptesResponse"/>
+
+<xs:complexType name="getCompte">
+<xs:sequence>
+<xs:element name="code" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCompteResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:compte" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="compte">
+<xs:sequence>
+<xs:element name="code" type="xs:int"/>
+<xs:element name="solde" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="convert">
+<xs:sequence>
+<xs:element name="montant" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="convertResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listComptes">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="listComptesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:compte" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

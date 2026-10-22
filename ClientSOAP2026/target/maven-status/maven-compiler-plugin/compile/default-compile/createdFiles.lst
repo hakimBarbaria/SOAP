@@ -1,0 +1,11 @@
+com\example\proxy\ListComptes.class
+com\example\proxy\package-info.class
+com\example\proxy\ObjectFactory.class
+com\example\proxy\ConvertResponse.class
+com\example\proxy\ListComptesResponse.class
+com\example\proxy\Compte.class
+com\example\proxy\GetCompte.class
+com\example\proxy\BanqueWSSOAP.class
+com\example\proxy\Convert.class
+com\example\proxy\BanqueService.class
+com\example\proxy\GetCompteResponse.class
